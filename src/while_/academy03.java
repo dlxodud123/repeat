@@ -22,10 +22,10 @@ public class academy03 {
 					break;
 				}else {
 					if (dap < com) {
-						
+						System.out.println("Up");
 						cmt++;
 					}else if (dap > com) {
-						
+						System.out.println("Down");
 						cmt++;
 					}
 					continue;
