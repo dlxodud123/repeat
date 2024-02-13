@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class home03 {
 	public static void main(String[] args) {
-		int func, result;
+		int func, result, sum1 = 0;
 		String sum = "", XO;
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
@@ -20,10 +20,33 @@ public class home03 {
 						XO = "X";
 					}else {
 						XO = "O";
+						sum1 += 1;
 					}
 					sum += XO;
 				}
-				System.out.println(sum);
+				System.out.print(sum);
+				switch (sum1) {
+				case 0:
+					System.out.println(" => 윷");
+					break;
+				case 1:
+					System.out.println(" => 도");
+					break;
+				case 2:
+					System.out.println(" => 개");
+					break;
+				case 3:
+					System.out.println(" => 걸");
+					break;
+				default:
+					break;
+				}
+				if (sum1 == 4) {
+					System.out.println(" => 모가 나왔습니다 게임 종료 !!");
+					break;
+				}
+				sum1 = 0;
+				System.out.println();
 				sum = "";
 			}else if (func == 2) {
 				System.out.println("게임이 종료되었습니다.");
